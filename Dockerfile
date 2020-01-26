@@ -128,6 +128,9 @@ VOLUME [ \
     "/etc/splash/lua_modules" \
 ]
 
+# https://github.com/Shokesu/splash
+# https://stackoverflow.com/questions/46046045/using-docker-scrapy-splash-on-heroku/46068133#46068133
+
 # Heroku doesn't support this. Use $PORT 
 # EXPOSE 8050
 
@@ -140,3 +143,5 @@ VOLUME [ \
 #     "--filters-path", "/etc/splash/filters", \
 #     "--lua-package-path", "/etc/splash/lua_modules/?.lua" \
 # ]
+
+CMD [ "sh", "/app/run.sh" ]
